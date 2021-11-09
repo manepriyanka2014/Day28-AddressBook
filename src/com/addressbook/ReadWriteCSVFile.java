@@ -12,11 +12,12 @@ import java.util.Hashtable;
 import java.util.Scanner;
 
 public class ReadWriteCSVFile {
-    String filePath = "src/main/address";
+    String filePath = "src/main/resources";
 
     /**
      * Purpose : Ability to write the user input data in a .csv file
      * Create a .csv file based on the CompanyName and insert data specific to the CompanyName
+     *
      * @param personInfoDict
      */
 

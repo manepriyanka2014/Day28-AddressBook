@@ -19,6 +19,7 @@ public class AddressBook {
         Hashtable<String, ArrayList<contactInfo>> personInfoDict = new Hashtable<>();
         ReadWriteOperations readWriteObj = new ReadWriteOperations();
         ReadWriteCSVFile csvObj = new ReadWriteCSVFile();
+        ReadWriteJSONFile jsonFile = new ReadWriteJSONFile();
 
         boolean flag = true;
         int option;
@@ -30,6 +31,7 @@ public class AddressBook {
                     personInfoDict = add_Book.insertContactDetails();
                     readWriteObj.writeInAddressBook(personInfoDict);
                     csvObj.writeCSVFile(personInfoDict);
+                    jsonFile.writeJSONFile(personInfoDict);
                     break;
                 case EDIT:
                     System.out.print("\n" + "Enter the name of the Address Book that you want to replace: ");
@@ -46,6 +48,7 @@ public class AddressBook {
                     System.out.println("\n" + "Display all contacts in the Address Book");
                     readWriteObj.readFromAddressBook();
                     csvObj.readCSVFile();
+                    jsonFile.readJSONFile();
                     break;
                 case SEARCH_CITY:
                     System.out.println("\n" + "Search Address Book based on City or State");

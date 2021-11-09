@@ -12,8 +12,9 @@ public class ReadWriteOperations {
 
     /**
      * Purpose : Ability to Write the Address Book with Persons Contact into a File using File IO
-     **/
-    
+     *
+     * @param : personInfoDict
+     */
     public void writeInAddressBook(Hashtable<String, ArrayList<contactInfo>> personInfoDict) {
         StringBuffer empBuffer = new StringBuffer();
         personInfoDict.forEach((companyName, personInfos) -> {
@@ -28,9 +29,10 @@ public class ReadWriteOperations {
         }
     }
 
-    /**
+    /*
      * Purpose : Ability to Read the Address Book with Persons Contact into a File using File IO
-   **/
+     *
+     */
     public void readFromAddressBook() {
         try {
             Files.lines(new File(filePath).toPath())
